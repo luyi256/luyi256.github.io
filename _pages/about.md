@@ -6,7 +6,7 @@ subtitle: >
   Renmin University of China, Beijing, China<br>
   Email: yilu@ruc.edu.cn<br>
   <a href="https://scholar.google.com/citations?user=xCFxaiYAAAAJ&hl=zh-CN">Google Scholar  </a>
-  <a href="[url](https://github.com/luyi256)">GitHub</a>
+  <a href="https://github.com/luyi256">GitHub</a>
 profile:
   align: right
   image: body_median.jpg
