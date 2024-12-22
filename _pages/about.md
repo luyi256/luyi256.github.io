@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I am currently a 2nd-year Ph.D. student at [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/en), [Renmin University of China](https://en.ruc.edu.cn), where I am fortunate to be advised by Prof. [Zhewei Wei](https://weizhewei.com/). Before my graduate studies, I received my B.E. degree in Computer Science and Technology at [School of Computer Science](https://scs.bupt.edu.cn/), Beijing University of Posts and Telecommunications in June 2022.
+I am currently a 3rd-year Ph.D. student at [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/en), [Renmin University of China](https://en.ruc.edu.cn), where I am fortunate to be advised by Prof. [Zhewei Wei](https://weizhewei.com/). Before my graduate studies, I received my B.E. degree in Computer Science and Technology at [School of Computer Science](https://scs.bupt.edu.cn/), Beijing University of Posts and Telecommunications in June 2022.
 
 My research interests lie in deep learning and data mining on graph data. In particular, I am interested in Dynamic Graph Neural Network, graph unlearning, and sub-linear time algorithms for large-scale graph analysis problem. 
 
