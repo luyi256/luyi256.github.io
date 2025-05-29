@@ -1,0 +1,80 @@
+@article{yi2024scalable,
+  title={Scalable and Certifiable Graph Unlearning: Overcoming the Approximation Error Barrier},
+  author={Yi, Lu and Wei, Zhewei},
+  journal={To be presented at ICLR},
+  year={2025},
+  abstract={Graph unlearning has emerged as a pivotal research area for ensuring privacy protection, given the widespread adoption of Graph Neural Networks (GNNs) in applications involving sensitive user data. Among existing studies, certified graph unlearning is distinguished by providing robust privacy guarantees. However, current certified graph unlearning methods are impractical for large-scale graphs because they necessitate the costly re-computation of graph propagation for each unlearning request. Although numerous scalable techniques have been developed to accelerate graph propagation for GNNs, their integration into certified graph unlearning remains uncertain as these scalable approaches introduce approximation errors into node embeddings. In contrast, certified graph unlearning demands bounded model error on exact node embeddings to maintain its certified guarantee.
+
+  To address this challenge, we present ScaleGUN, the first approach to scale certified graph unlearning to billion-edge graphs. ScaleGUN integrates the approximate graph propagation technique into certified graph unlearning, offering certified guarantees for three unlearning scenarios: node feature, edge and node unlearning. 
+  Extensive experiments on real-world datasets demonstrate the efficiency and unlearning efficacy of ScaleGUN. Remarkably, ScaleGUN accomplishes $(\epsilon,\delta)=(1,10^{-4})$ certified unlearning on the billion-edge graph ogbn-papers100M in 20 seconds for a 5,000 random edge removal request -- of which only 5 seconds are required for updating the node embeddings -- compared to 1.91 hours for retraining and 1.89 hours for re-propagation. Our code is available at https://github.com/luyi256/ScaleGUN.},
+  url={https://arxiv.org/abs/2408.09212},
+  selected  = true,
+  abbr      = {ICLR 2025},
+  pdf       = {ScaleGUN.pdf}
+}
+
+@article{yi2025tgb,
+  title={TGB-Seq Benchmark: Challenging Temporal GNNs with Complex Sequential Dynamics},
+  author={Yi, Lu and Peng, Jie and Zheng, Yanping and Mo, Fengran and Wei, Zhewei and Ye, Yuhang and Zixuan, Yue and Huang, Zengfeng},
+  journal={To be presented at ICLR},
+  year={2025},
+  abstract={Future link prediction is a fundamental challenge in various real-world dynamic systems. To address this, numerous temporal graph neural networks (temporal GNNs) and benchmark datasets have been developed. However, these datasets often feature excessive repeated edges and lack complex sequential dynamics, a key characteristic inherent in many real-world applications such as recommender systems and "Who-To-Follow" on social networks. This oversight has led existing methods to inadvertently downplay the importance of learning sequential dynamics, focusing primarily on predicting repeated edges.
+
+In this study, we demonstrate that existing methods, such as GraphMixer and DyGFormer, are inherently incapable of learning simple sequential dynamics, such as "a user who has followed OpenAI and Anthropic is more likely to follow AI at Meta next." Motivated by this issue, we introduce the Temporal Graph Benchmark with Sequential Dynamics (TGB-Seq), a new benchmark carefully curated to minimize repeated edges, challenging models to learn sequential dynamics and generalize to unseen edges. TGB-Seq comprises large real-world datasets spanning diverse domains, including e-commerce interactions, movie ratings, business reviews, social networks, citation networks and web link networks. Benchmarking experiments reveal that current methods usually suffer significant performance degradation and incur substantial training costs on TGB-Seq, posing new challenges and opportunities for future research. TGB-Seq datasets, leaderboards, and example codes are available at https://tgb-seq.github.io/.},
+  url={https://arxiv.org/abs/2502.02975},
+  selected  = true,
+  abbr      = {ICLR 2025},
+  pdf       = {TGB-Seq.pdf}
+}
+
+@article{zheng2024survey,
+  title={A Survey of Dynamic Graph Neural Networks},
+  author={Zheng, Yanping and Yi, Lu and Wei, Zhewei},
+  journal={Frontiers of Computer Science},
+  year={2024},
+  abstract={Graph neural networks (GNNs) have emerged as a powerful tool for effectively mining and learning from graph-structured data, with applications spanning numerous domains. However, most research focuses on static graphs, neglecting the dynamic nature of real-world networks where topologies and attributes evolve over time. By integrating sequence modeling modules into traditional GNN architectures, dynamic GNNs aim to bridge this gap, capturing the inherent temporal dependencies of dynamic graphs for a more authentic depiction of complex networks. This paper provides a comprehensive review of the fundamental concepts, key techniques, and state-of-the-art dynamic GNN models. We present the mainstream dynamic GNN models in detail and categorize models based on how temporal information is incorporated. We also discuss large-scale dynamic GNNs and pre-training techniques. Although dynamic GNNs have shown superior performance, challenges remain in scalability, handling heterogeneous information, and lack of diverse graph datasets. The paper also discusses possible future directions, such as adaptive and memory-enhanced models, inductive learning, and theoretical analysis. },
+  url={https://journal.hep.com.cn/fcs/EN/10.1007/s11704-024-3853-2},
+  selected  = true,
+  abbr      = {FCS 2024},
+  pdf       = {DGNNsurvey.pdf}
+}
+
+@inproceedings{10.1145/3580305.3599458,
+  author    = {Yi, Lu and Wang, Hanzhi and Wei, Zhewei},
+  title     = {Optimal Dynamic Subset Sampling: Theory and Applications},
+  year      = {2023},
+  isbn      = {9798400701030},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3580305.3599458},
+  doi       = {10.1145/3580305.3599458},
+  abstract  = {We study the fundamental problem of sampling independent events, called subset sampling. Specifically, consider a set of n distinct events S=x1, …, xn, in which each event xi has an associated probability p(xi). The subset sampling problem aims to sample a subset T ⊆ S, such that every xi is independently included in T with probability p(xi). A naive solution is to flip a coin for each event, which takes O(n) time. However, an ideal solution is a data structure that allows drawing a subset sample in time proportional to the expected output size μ=∑i=1n p(xi), which can be significantly smaller than n in many applications. The subset sampling problem serves as an important building block in many tasks and has been the subject of various research for more than a decade.However, the majority of existing subset sampling methods are designed for a static setting, where the events in set S or their associated probabilities remain unchanged over time. These algorithms incur either large query time or update time in a dynamic setting despite the ubiquitous time-evolving events with varying probabilities in real life. Therefore, it is a pressing need, but still, an open problem, to design efficient dynamic subset sampling algorithms.In this paper, we propose ODSS, the first optimal dynamic subset sampling algorithm. The expected query time and update time of ODSS are both optimal, matching the lower bounds of the subset sampling problem. We present a nontrivial theoretical analysis to demonstrate the superiority of ODSS. We also conduct comprehensive experiments to empirically evaluate the performance of ODSS. Moreover, we apply ODSS to a concrete application: Influence Maximization. We empirically show that our ODSS can improve the complexities of existing Influence Maximization algorithms on large real-world evolving social networks.},
+  booktitle = {Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages     = {3116–3127},
+  numpages  = {12},
+  keywords  = {subset sampling, optimal time cost, dynamic probabilities},
+  location  = {<conf-loc>, <city>Long Beach</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+  series    = {KDD '23},
+  selected  = true,
+  abbr      = {KDD 2023},
+  pdf       = {ODSS.pdf},
+  poster    = {ODSS_poster.pdf}
+}
+
+@Article{2024-40148,
+title = {Random-Walk Probability Computation on Dynamic Weighted Graphs},
+journal = {Journal of Computer Research and Development},
+volume = {61},
+number = {8},
+pages = {1865-1881},
+year = {2024},
+issn = {1000-1239},
+doi = {10.7544/issn1000-1239.202440148},	
+url = {https://crad.ict.ac.cn/en/article/doi/10.7544/issn1000-1239.202440148},
+author = {Wang Hanzhi and Yi Lu and Wei Zhewei and Gan Junhao and Yuan Ye and Wen Jirong and Du Xiaoyong},
+abstract = {<p>Computing random-walk probabilities on graphs is the subject of extensive research in both graph theory and data mining research. However, existing work mainly focuses on static graphs, and cannot efficiently support dynamic weighted graphs, which are ubiquitous in real-world applications. We study the problem of computing random-walk probabilities on dynamic weighted graphs. We propose to use a sampling schema called coin flip sampling, rather than the more commonly adopted weighted sampling schema, for simulating random walks in dynamic weighted graphs. We demonstrate that simulations based on coin-flip sampling maintain the unbiasedness of the resulting random-walk probability approximations. Moreover, this approach allows us to simultaneously achieve a near-optimal query time complexity and an optimal $ O\left(1\right) $ update time overhead per edge insertion or deletion. This is a significant improvement over existing methods, which typically incur substantial sampling costs or rely on intricate auxiliary structures that are hard to maintain in a dynamic setting. We present both theoretical analysis and empirical evaluations to substantiate the superiority of our method on dynamic weighted graphs.</p>},
+pdf = {CoinFlipWalk.pdf},
+selected = true,
+abbr = {J-CRAD 2024},
+
+}

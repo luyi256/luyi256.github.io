@@ -1,12 +1,10 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
   Renmin University of China, Beijing, China<br>
-  Email: yilu@ruc.edu.cn<br>
-  <a href="https://scholar.google.com/citations?user=xCFxaiYAAAAJ&hl=zh-CN">Google Scholar</a> &ensp;&nbsp;
-  <a href="https://github.com/luyi256">GitHub</a>
+  Email: yilu AT ruc.edu.cn<br>
 profile:
   align: right
   image: body_median.jpg
@@ -16,7 +14,7 @@ profile:
 news: true # includes a list of news items
 latest_posts: false # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 I am currently a 3rd-year Ph.D. candidate at [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/en), [Renmin University of China](https://en.ruc.edu.cn), where I am fortunate to be advised by Prof. [Zhewei Wei](https://weizhewei.com/). Before my graduate studies, I received my B.E. degree in Computer Science and Technology at [School of Computer Science](https://scs.bupt.edu.cn/), Beijing University of Posts and Telecommunications in June 2022.

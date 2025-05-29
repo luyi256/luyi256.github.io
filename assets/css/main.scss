@@ -1,20 +1,83 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
+$max-content-width: {{ site.max_width }};
 @charset "utf-8";
 
-// Dimensions
-$max-content-width: {{ site.max_width }};
+@import "variables";
+@import "themes";
+@import "layout";
+@import "base";
+@import "distill";
+@import "cv";
+@import "font-awesome/fontawesome";
+@import "font-awesome/brands";
+@import "font-awesome/solid";
+@import "font-awesome/regular";
 
-@import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill",
-  "cv",
-  "font-awesome/fontawesome",
-  "font-awesome/brands",
-  "font-awesome/solid",
-  "font-awesome/regular"
-;
+.container, .post, .content {
+  max-width: 1000px !important;  // lu: the width of the content
+}
+
+.about-header-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-header-flex .profile {
+  min-width: 180px;
+  max-width: 240px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.about-header-flex .profile img {
+  width: 180px;
+  height: 180px;
+  max-height: 320px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+}
+
+.about-main-text {
+  flex: 1;
+  text-align: left;
+  align-self: center;
+}
+
+.about-main-text .post-title {
+  font-size: 2.0rem; // lu: the font size of the title Lu Yi
+}
+.about-main-text .desc,
+.about-main-text a {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .about-header-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-main-text {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.my-social-icons {
+  margin-top: 0.3rem;
+}
+.my-social-icons a {
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+  color: #0072b1;
+  transition: color 0.2s;
+  vertical-align: middle;
+}
+.my-social-icons a:hover {
+  color: #0072b1;
+}

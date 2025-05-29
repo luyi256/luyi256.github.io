@@ -1,13 +1,5 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
-  }
-};
-
 let setTheme = (theme) => {
   transTheme();
   setHighlight(theme);
@@ -195,11 +187,3 @@ let initTheme = (theme) => {
 };
 
 initTheme(localStorage.getItem("theme"));
-
-document.addEventListener("DOMContentLoaded", function () {
-  const mode_toggle = document.getElementById("light-toggle");
-
-  mode_toggle.addEventListener("click", function () {
-    toggleTheme(localStorage.getItem("theme"));
-  });
-});
