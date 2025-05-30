@@ -81,3 +81,16 @@ $max-content-width: {{ site.max_width }};
 .my-social-icons a:hover {
   color: #0072b1;
 }
+
+.pub-links {
+  font-size: 1rem;
+  margin-left: 0.2em;
+  display: inline;
+  vertical-align: 0.1em;
+}
+.pub-links a {
+  margin-right: 0.1em;
+  vertical-align: middle;
+  line-height: 1;
+  display: inline-block;
+}

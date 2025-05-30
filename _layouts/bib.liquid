@@ -6,8 +6,34 @@
   <!-- Entry bib key -->
   <li>
   <div id="{{ entry.key }}" class="col">
-    <!-- Title -->
-    {% if entry.html %}<a href="{{ entry.html }}">{% endif %}<b style="color: var(--global-theme-color);">{{ entry.title }}</b>{% if entry.html %}</a>{% endif %}
+    <!-- Title + Links -->
+    {% if entry.html %}<a href="{{ entry.html }}">{% endif %}
+      <b style="color: var(--global-theme-color);">{{ entry.title }}.</b>
+    {% if entry.html %}</a>{% endif %}
+    <span class="pub-links">
+      {% if entry.arxiv %}
+        [<a href="{{ entry.arxiv }}" class="" role="button">arXiv</a>]
+      {% else if entry.url %}
+        [<a href="{{ entry.url }}" class="" role="button">URL</a>]
+      {% endif %}
+      {% if entry.pdf %}
+        {% if entry.pdf contains '://' %}
+          [<a href="{{ entry.pdf }}" class="" role="button">PDF</a>]
+        {% else %}
+          [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="" role="button">PDF</a>]
+        {% endif %}
+      {% endif %}
+      {% if entry.code %}
+        [<a href="{{ entry.code }}" class="" role="button">Code</a>]
+      {% endif %}
+      {% if entry.poster %}
+        {% if entry.poster contains '://' %}
+          [<a href="{{ entry.poster }}" class="" role="button">Poster</a>]
+        {% else %}
+          [<a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="" role="button">Poster</a>]
+        {% endif %}
+      {% endif %}
+    </span>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -164,21 +190,11 @@
        {% comment %} {% if page.title == "About" and entry.abstract %}
         [<a class="abstract" role="button" style="color: var(--global-theme-color);">TLDR</a>]
       {% endif %}  {% endcomment %}
-      {% if entry.arxiv %}
-        [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="" role="button">arXiv</a>]
-      {% endif %}
       {% if entry.chemrxiv %}
         [<a href="{{ entry.chemrxiv }}" class="" role="button">ChemRxiv</a>]
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
-      {% endif %}
-      {% if entry.pdf %}
-        {% if entry.pdf contains '://' %}
-          [<a href="{{ entry.pdf }}" class="" role="button">PDF</a>]
-        {% else %}
-          [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="" role="button">PDF</a>]
-        {% endif %}
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
@@ -194,16 +210,6 @@
       {% endif %}
       {% if entry.blog %}
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
-      {% endif %}
-      {% if entry.code %}
-        [<a href="{{ entry.code }}" class="" role="button">Code</a>]
-      {% endif %}
-      {% if entry.poster %}
-        {% if entry.poster contains '://' %}
-          [<a href="{{ entry.poster }}" class="" role="button">Poster</a>]
-        {% else %}
-          [<a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="" role="button">Poster</a>]
-        {% endif %}
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
