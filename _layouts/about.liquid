@@ -52,11 +52,22 @@ layout: default
     </h2>
     {% include news.liquid limit=true %}
   {% endif %}
+  {% if page.intern %}
+    {% assign intern_page = site.pages | where: "permalink", "/intern/" | first %}
+    <h2>Internship</h2>
+    {{ intern_page.content | markdownify }}
+  {% endif %}
   {% if page.latest_posts %}
     <h2>
       <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
     </h2>
     {% include latest_posts.liquid %}
+  {% endif %}
+  {% if page.selected_papers %}
+    <h2>
+      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected publications</a>
+    </h2>
+    {% include selected_papers.liquid %}
   {% endif %}
   {% if page.talk %}
     {% assign talk_page = site.pages | where: "permalink", "/talks/" | first %}
@@ -64,11 +75,5 @@ layout: default
       <a href="{{ '/talks/' | relative_url }}" style="color: inherit">Talks</a>
     </h2>
     {{ talk_page.content | markdownify }}
-  {% endif %}
-  {% if page.selected_papers %}
-    <h2>
-      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected publications</a>
-    </h2>
-    {% include selected_papers.liquid %}
   {% endif %}
 </div>

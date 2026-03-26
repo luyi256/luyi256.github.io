@@ -7,18 +7,19 @@ subtitle: >
   Email: yilu AT ruc.edu.cn<br>
 profile:
   align: right
-  image: body_median.jpg
+  image: luyi.png
   image_circular: true # crops the image to make it circular
   more_info: 
 
 news: true # includes a list of news items
+intern: true # includes internship info
 latest_posts: false # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 talk: true # includes a list of talks
 ---
 
-I am currently a 3rd-year Ph.D. candidate at [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/en), [Renmin University of China](https://en.ruc.edu.cn), where I am fortunate to be advised by Prof. [Zhewei Wei](https://weizhewei.com/). Before my graduate studies, I received my B.E. degree in Computer Science and Technology at [School of Computer Science](https://scs.bupt.edu.cn/), Beijing University of Posts and Telecommunications in June 2022.
+I am currently a 4th-year Ph.D. candidate at [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/en), [Renmin University of China](https://en.ruc.edu.cn), where I am fortunate to be advised by Prof. [Zhewei Wei](https://weizhewei.com/). Before my graduate studies, I received my B.E. degree in Computer Science and Technology at [School of Computer Science](https://scs.bupt.edu.cn/), Beijing University of Posts and Telecommunications in June 2022.
 
 My research interests lie in deep learning and data mining on graph data. In particular, I am interested in Dynamic Graph Neural Network, graph unlearning, and sub-linear time algorithms for large-scale graph analysis problem. 
 
